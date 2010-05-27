@@ -14,6 +14,8 @@ To clear the delay, simply call the clear method:
 
 There is no need to assign the delay to a variable like the normal MooTools delay method.
 
+See example.html and the source for more example uses and arguments.
+
 Known Issues
 -----------------
 There are probably many, I haven't really tested this outside of standard compliant browsers and outside my necessary means.
