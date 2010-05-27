@@ -1,3 +1,19 @@
+/*
+---
+description: Function.simpleDelay
+
+license: MIT-style
+
+authors:
+- Amadeus Demarzi (http://enmassellc.com/)
+
+requires:
+ core/1.2.4: '*'
+
+provides: [Function.simpleDelay]
+...
+*/
+
 (function(){
 	if(Function.prototype.simpleDelay) return;
 
