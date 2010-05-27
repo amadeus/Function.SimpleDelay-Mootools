@@ -4,7 +4,7 @@ Purpose: A simple and elegant delay method that can be easily self cleared witho
 
 How to use
 ----------
-Simply include Function.simpleDelay.js along with MooTools 1.2.4+. The delay can be invoked on any function my simply calling:
+Simply include Function.simpleDelay.js along with MooTools 1.2.4+. The delay can be invoked on any function by simply calling:
 
 	someFunc.simpleDelay(2000);
 
