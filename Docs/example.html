@@ -22,7 +22,9 @@
 		};
 		
 		var clearExample = function(){
-			alert('If you see this message, the clear method did not work!');
+			new Element('p',{
+				text:'If you see this message, the clear method did not work!'
+			}).inject(document.body);
 		};
 		
 		// simpleDelay examples

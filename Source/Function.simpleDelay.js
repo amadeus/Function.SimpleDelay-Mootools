@@ -15,7 +15,6 @@ provides: [Function.simpleDelay]
 */
 
 (function(){
-	if(Function.prototype.simpleDelay || Function.prototype.sDelay) return;
 	Function.implement({
 		simpleDelay:function(delay,bind,args){
 			if(this._sDelay) this.simpleClear();
