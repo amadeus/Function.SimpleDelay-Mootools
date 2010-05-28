@@ -18,7 +18,7 @@ provides: [Function.simpleDelay]
 	if(Function.prototype.simpleDelay || Function.prototype.sDelay) return;
 	Function.implement({
 		simpleDelay:function(delay,bind,args){
-			if(this._sDelay) this.sClear();
+			if(this._sDelay) this.simpleClear();
 			var _func = this;
 			var _args = args ? args : [];
 			var _bind = bind ? bind : window;
