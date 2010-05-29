@@ -29,11 +29,27 @@
 		
 		// simpleDelay examples
 		helloWorld.simpleDelay(2000,null,'Hello, This is simple delay. After 2000ms');
-		bindExample.simpleDelay(5000,scope);
+		bindExample.sDelay(5000,scope);
 		
 		// Clearing example
 		clearExample.simpleDelay(10000);
 		clearExample.simpleClear();
+		
+		window.addEvent('domready',function(){
+			
+			// Periodical
+			var periodicalExampleP = new Element('p').inject(document.body);
+			var periodicalExample = function(){
+				periodicalExampleP.set('text',new Date());
+			};
+			periodicalExample.simplePeriodical(2000);
+			
+			(function(){
+				periodicalExample.simpleClear();
+			}).delay(20000);
+			
+		});
+		
 	</script>
 </head>
 <body>

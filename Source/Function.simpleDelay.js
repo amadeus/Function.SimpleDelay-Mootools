@@ -14,26 +14,26 @@ provides: [Function.simpleDelay]
 ...
 */
 
-(function(){
-	Function.implement({
-		simpleDelay:function(delay,bind,args){
-			if(this._sDelay) this.simpleClear();
-			var _func = this;
-			var _args = args ? args : [];
-			var _bind = bind ? bind : window;
-			this._sDelay = setTimeout(_func.bind(_bind,_args),delay);
-			return this;
-		},
-		simpleClear:function(){
-			if(!this._sDelay) return this;
-			clearTimeout(this._sDelay);
-			delete this._sDelay;
-			return this;
-		}
-	});
-	// Shortcuts
-	Function.implement({
-		sDelay:function(delay,bind,args){ return this.simpleDelay(delay,bind,args); },
-		sClear:function(){ return this.simpleClear(); }
-	});
-})();
+Function.implement({
+	simpleDelay:function(delay,bind,args){
+		if(this._sTimer) this.simpleClear();
+		this._sTimer = this.delay.apply(this,arguments);
+		return this;
+	},
+	simplePeriodical:function(delay,bind,args){
+		if(this._sTimer) this.simpleClear();
+		this._sTimer = this.periodical.apply(this,arguments);
+		return this;
+	},
+	simpleClear:function(){
+		if(!this._sTimer) return this;
+		clearTimeout(this._sTimer);
+		delete this._sTimer;
+		return this;
+	}
+});
+
+// Shortcuts
+$each({sDelay: 'simpleDelay', sPeriodical: 'simplePeriodical', sClear: 'simpleClear'},function(oldMethod,newMethod){
+	Function.prototype[newMethod] = Function.prototype[oldMethod];
+});
