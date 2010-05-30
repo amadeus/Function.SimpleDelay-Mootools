@@ -1,6 +1,6 @@
 name: Function.simpleDelay
 author: demarzi
 category: Native
-current:  v1.2
-tags: [native, function, delay, simple]
-demo: http://mootools.net/shell/pGkt3/
+current:  v1.3
+tags: [native, function, delay, simple, periodical]
+demo: http://mootools.net/shell/Jm2Uh/

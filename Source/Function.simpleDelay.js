@@ -6,6 +6,7 @@ license: MIT-style
 
 authors:
 - Amadeus Demarzi (http://enmassellc.com/)
+- Arian Stolwijk
 
 requires:
  core/1.2.4: '*'

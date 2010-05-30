@@ -2,7 +2,7 @@ Function.SimpleDelay
 ===========
 Purpose: A simple and elegant delay method that can be easily self cleared without the need to add external variables
 
-[Shell Demo](http://mootools.net/shell/pGkt3/4/ "Shell Demo")
+[Shell Demo](http://mootools.net/shell/Jm2Uh/ "Shell Demo")
 
 How to use
 ----------

@@ -6,50 +6,47 @@
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/mootools/1.2.4/mootools-yui-compressed.js"></script>
 	<script src="../Source/Function.simpleDelay.js"></script>
 	<script>
-		// Example methods
-		var helloWorld = function(message){
-			new Element('p',{
-				text:message
-			}).inject(document.body);
-		};
-
-		var scope = 'Some Scope!';
-
-		var bindExample = function(){
-			new Element('p',{
-				text:'Scope is: "'+this+'", after 5 seconds'
-			}).inject(document.body);
-		};
-		
-		var clearExample = function(){
-			new Element('p',{
-				text:'If you see this message, the clear method did not work!'
-			}).inject(document.body);
-		};
-		
-		// simpleDelay examples
-		helloWorld.simpleDelay(2000,null,'Hello, This is simple delay. After 2000ms');
-		bindExample.sDelay(5000,scope);
-		
-		// Clearing example
-		clearExample.simpleDelay(10000);
-		clearExample.simpleClear();
-		
 		window.addEvent('domready',function(){
-			
-			// Periodical
+			// Example methods
+			var helloWorld = function(message){
+				new Element('p',{
+					text:message
+				}).inject(document.body);
+			};
+
+			var scope = 'Some Scope!';
+
+			var bindExample = function(){
+				new Element('p',{
+					text:'Scope is: "'+this+'", after 5 seconds'
+				}).inject(document.body);
+			};
+
+			var clearExample = function(){
+				new Element('p',{
+					text:'You should never see this message.'
+				}).inject(document.body);
+			};
+
 			var periodicalExampleP = new Element('p').inject(document.body);
 			var periodicalExample = function(){
 				periodicalExampleP.set('text',new Date());
 			};
-			periodicalExample.simplePeriodical(2000);
-			
+
+			// simpleDelay examples
+			helloWorld.simpleDelay(2000,null,'Hello, This is simple delay. After 2000ms');
+			bindExample.sDelay(5000,scope);
+
+			// Clearing example
+			clearExample.simpleDelay(10000);
+			clearExample.simpleClear();
+
+			// Periodical example
+			periodicalExample.simplePeriodical(1000);
 			(function(){
 				periodicalExample.simpleClear();
-			}).delay(20000);
-			
+			}).simpleDelay(20000);
 		});
-		
 	</script>
 </head>
 <body>
