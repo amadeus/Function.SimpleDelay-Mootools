@@ -9,33 +9,33 @@
 		window.addEvent('domready',function(){
 			// Example methods
 			var helloWorld = function(message){
-				new Element('p',{
-					text:message
+				new Element('p', {
+					text: message
 				}).inject(document.body);
 			};
 
 			var scope = 'Some Scope!';
 
 			var bindExample = function(){
-				new Element('p',{
-					text:'Scope is: "'+this+'", after 5 seconds'
+				new Element('p', {
+					text:'Scope is: "' + this + '", after 5 seconds'
 				}).inject(document.body);
 			};
 
 			var clearExample = function(){
-				new Element('p',{
+				new Element('p', {
 					text:'You should never see this message.'
 				}).inject(document.body);
 			};
 
 			var periodicalExampleP = new Element('p').inject(document.body);
 			var periodicalExample = function(){
-				periodicalExampleP.set('text',new Date());
+				periodicalExampleP.set('text', new Date());
 			};
 
 			// simpleDelay examples
-			helloWorld.simpleDelay(2000,null,'Hello, This is simple delay. After 2000ms');
-			bindExample.sDelay(5000,scope);
+			helloWorld.simpleDelay(2000, null, 'Hello, This is simple delay. After 2000ms');
+			bindExample.sDelay(5000, scope);
 
 			// Clearing example
 			clearExample.simpleDelay(10000);
